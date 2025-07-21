@@ -12,16 +12,19 @@
     <pre class="messages"></pre>
     <script>
       
-    // <!--   const parentWindow = window.top;
-    //   const messages = document.querySelector('.messages');
+      const parentWindow = window.top;
+      console.log(parentWindow);
+      const messages = document.querySelector('.messages');
+      console.log(messages);
       
-    //   window.addEventListener('message', (event) => {
-    //     const message = event.date;
+      window.addEventListener('message', (event) => {
+        console.log(event);
+        const message = event.data;
         
-    //     messages.textContent += message + '\n';
+        messages.textContent += message + '\n';
         
-    //     parentWindow.postMessage(Math.round(Math.random() * 1000), 'http://localhost:8080');
-    //   }); -->
-    </script>
+        parentWindow.postMessage(Math.round(Math.random() * 5000), 'http://localhost:8080');
+      });
+    </script><!-- -->
   </body>
 </html>
