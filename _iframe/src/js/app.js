@@ -49,8 +49,5 @@
 //   functionIncoming(data);
 // });
 
-console.log('12. Лекции: WebWorkers, ServiceWorkers.');
-// -------------------------------------------------------
-const iframeWindow = document.querySelector('.iframe').contentWindow.window;
-console.log(iframeWindow);
-iframeWindow.postMessage('test message', 'http://localhost:8081');
+// console.log('12. Лекции: WebWorkers, ServiceWorkers.');
+window.addEventListener('message', () => {console.log('recieved a messge');});

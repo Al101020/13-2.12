@@ -2,4 +2,4 @@
 Ссылка на результат: https://al101020.github.io/13-2.12/<br>
 
 # 13-2.12
-12. Postmessages, WebWorkers, ServiceWorkers
+12. WebWorkers, ServiceWorkers

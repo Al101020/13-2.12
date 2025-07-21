@@ -7,6 +7,31 @@
     <title>лекция: Workers</title>
   </head>
   <body>
-    <h4>12. Лекции: WebWorkers, ServiceWorkers.</h4>
+    <h4>12. Лекции: Postmessages, WebWorkers, ServiceWorkers.</h4>
+    <h1>Postmessages</h1>
+
+    <iframe class="iframe" src="http://localhost:8081/"></iframe>
+    <pre class="messages"></pre>
+    <!-- <script>
+      const iframe = document.querySelector('.iframe');
+      const iframeWindow = iframe.contentWindow.window;
+      const messages = document.querySelector('.messages');
+
+      const sendMessage = (message) => {
+        iframeWindow.postMessage(message, 'http://localhost:8081');
+      }
+
+      iframe.addEventListener('load', () => {
+        sendMessage('start message');
+        
+        window.addEventListener('message', (event) => {
+          messages.textContent += event.date + '\n';
+          
+          setTimeout(() => {
+            sendMessage(Math.round(Math.random() * 1000));
+          }, 1000);
+        });
+      });
+    </script> -->
   </body>
 </html>
