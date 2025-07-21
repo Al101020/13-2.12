@@ -48,3 +48,5 @@
 // stream$.subscribe((data) => { // console.log(data);
 //   functionIncoming(data);
 // });
+
+console.log('12. Лекции: WebWorkers, ServiceWorkers.');
