@@ -10,7 +10,7 @@
     <h4>12. Лекции: Postmessages, WebWorkers, ServiceWorkers.</h4>
     <h1>Postmessages</h1>
 
-    <iframe class="iframe" src="http://localhost:8081/"></iframe>
+    <!-- <iframe class="iframe" src="http://localhost:8081/"></iframe> -->
     <pre class="messages"></pre>
     <!-- <script>
       const iframe = document.querySelector('.iframe');
@@ -33,5 +33,30 @@
         });
       });
     </script> -->
+    <h1>Web Workers</h1>
+    <button class="slow-button">Тормоз-кнопка</button>
+    <button class="console-button">Консоль-кнопка</button>
+  
+    <script>
+      // console.log();
+      const worker = new Worker('./worker.js');
+      console.log(worker);
+
+      const slowButton = document.querySelector('.slow-button');
+      const consoleButton = document.querySelector('.console-button');
+
+      slowButton.addEventListener('click', () => {
+        console.log('start');
+        let z;
+        for (let i = 0; i < 10000000000; i += 1) {
+          z = i * 2;
+        }
+        console.log(z);
+      })
+
+      consoleButton.addEventListener('click', () => {
+        console.log('click console-button');
+      })
+    </script>
   </body>
 </html>
