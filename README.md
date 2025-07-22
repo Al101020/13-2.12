@@ -3,3 +3,5 @@
 
 # 13-2.12
 12. Postmessages, WebWorkers, ServiceWorkers
+
+Postmessages - интересно, но мне кажется почти весь код совершается на одной стооне.

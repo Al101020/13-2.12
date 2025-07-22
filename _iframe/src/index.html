@@ -10,7 +10,7 @@
     <h4>12. Лекции: Postmessages, WebWorkers, ServiceWorkers.</h4>
     <h1>Iframe</h1>
     <pre class="messages"></pre>
-    <script>
+    <!--<script>
       
       const parentWindow = window.top;
       console.log(parentWindow);
@@ -23,8 +23,8 @@
         
         messages.textContent += message + '\n';
         
-        parentWindow.postMessage(Math.round(Math.random() * 5000), 'http://localhost:8080');
+        parentWindow.postMessage(Math.round(Math.random() * 1000), 'http://localhost:8080');
       });
-    </script><!-- -->
+    </script> -->
   </body>
 </html>
