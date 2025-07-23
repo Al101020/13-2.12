@@ -12,51 +12,12 @@
 
     <!-- <iframe class="iframe" src="http://localhost:8081/"></iframe> -->
     <pre class="messages"></pre>
-    <!-- <script>
-      const iframe = document.querySelector('.iframe');
-      const iframeWindow = iframe.contentWindow.window;
-      const messages = document.querySelector('.messages');
-
-      const sendMessage = (message) => {
-        iframeWindow.postMessage(message, 'http://localhost:8081');
-      }
-
-      iframe.addEventListener('load', () => {
-        sendMessage('start message');
-        
-        window.addEventListener('message', (event) => {
-          messages.textContent += event.data + '\n';
-          
-          setTimeout(() => {
-            sendMessage(Math.round(Math.random() * 1000));
-          }, 5000);
-        });
-      });
-    </script> -->
     <h1>2. Web Workers</h1>
     <button class="slow-button">Тормоз-кнопка</button>
     <button class="console-button">Консоль-кнопка</button>
-<!--   
-    <script>
-      // console.log();
-      const worker = new Worker('worker.js');
-      console.log(worker);
+    <h2>2.1 Web Workers(чтение файлов)</h2>
+    <input type="file" class="file-input"/>
+    
 
-      const slowButton = document.querySelector('.slow-button');
-      const consoleButton = document.querySelector('.console-button');
-
-      slowButton.addEventListener('click', () => {
-        console.log('start');
-        let z;
-        for (let i = 0; i < 10000000000; i += 1) {
-          z = i * 2;
-        }
-        console.log(z);
-      })
-
-      consoleButton.addEventListener('click', () => {
-        console.log('click console-button');
-      })
-    </script> -->
   </body>
 </html>
