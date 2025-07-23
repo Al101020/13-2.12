@@ -6,9 +6,9 @@ this.addEventListener('message', (event) => {
 
   console.log('start - долгих расчётов');
   let z;
-  for (let i = 0; i < 10000000000; i += 1) {
+  for (let i = 0; i < 1000000000; i += 1) {
     z = i * 2;
   }
   console.log(z);
-  return z;
+  this.postMessage(z); // return z;
 });
