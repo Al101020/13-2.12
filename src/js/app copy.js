@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>лекция: Workers</title>
-  </head>
-  <body>
-    <h4>12. Лекции: Postmessages, WebWorkers, ServiceWorkers.</h4>
-    <h1>1. Postmessages</h1>
-
-    <!-- <iframe class="iframe" src="http://localhost:8081/"></iframe> -->
-    <pre class="messages"></pre>
-    <h1>2. Web Workers</h1>
-    <button class="slow-button">Тормоз-кнопка</button>
-    <button class="console-button">Консоль-кнопка</button>
-    <h2>2.1 Web Workers(чтение файлов - картинки)</h2>
-    <input type="file" class="file-input"/>
-    <div>-----------------------</div>
-    <img class="img-preview"/>
-    <h2>2.2 Web Workers(чтение файлов - текст)</h2>
-    <pre class="text-preview"></pre>
-    
-    <script type="module">
 const worker = new Worker('../src/worker.js');// этот вариант даже на сайте сборку прошёл.
 
 const slowButton = document.querySelector('.slow-button');// console.log(slowButton);
@@ -66,7 +41,3 @@ worker.addEventListener('message', (event) => {
   const textPreview = document.querySelector('.text-preview');
   textPreview.textContent = event.data;
 });
-    </script>
-
-  </body>
-</html>

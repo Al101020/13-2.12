@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "jszip": "^3.10.1",
     "md-converter": "^1.0.3",
     "rxjs": "^7.8.2"
   }
